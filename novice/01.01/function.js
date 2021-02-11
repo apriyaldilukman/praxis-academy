@@ -209,23 +209,30 @@
 // Arrow function and "this" //
 
 //constructor function//
-function Student(rollno,firstName,lastName) {
-    this.rollno = rollno;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.fullNameUsingAnonymous = function(){
-        setTimeout(function(){
+// function Student(rollno,firstName,lastName) {
+//     this.rollno = rollno;
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.fullNameUsingAnonymous = function(){
+//         setTimeout(function(){
             //cretes a new instance of this ,hides outer scope of this//
-            console.log(this.firstName+ " "+this.lastName)
-        },2000)
-    }
-    this.fullNameUsingArrow = function(){
-        setTimeout(()=>{
-            // uses this instance of outer scope
-            console.log(this.firstName+ " "+this.lastName)
-        },3000)
-    }
+//             console.log(this.firstName+ " "+this.lastName)
+//         },2000)
+//     }
+//     this.fullNameUsingArrow = function(){
+//         setTimeout(()=>{
+//             // uses this instance of outer scope
+//             console.log(this.firstName+ " "+this.lastName)
+//         },3000)
+//     }
+// }
+// const s1 = new Student(101,'Mohammad','Mohtashim')
+// s1.fullNameUsingAnonymous();
+// s1.fullNameUsingArrow();
+
+// Array //
+var arr_names = new Array(4)
+for(var i = 0;i<arr_names.length;i++) {
+    arr_names[i] = i * 2
+    console.log(arr_names[i])
 }
-const s1 = new Student(101,'Mohammad','Mohtashim')
-s1.fullNameUsingAnonymous();
-s1.fullNameUsingArrow();
